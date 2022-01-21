@@ -1,0 +1,26 @@
+# /etc/conf.d/cougard: config file for /etc/init.d/cougard
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/cougar/cougar.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/cougard"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/cougard.pid"
+
+# Where to write cougard data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/cougard"
+
+# User and group to own cougard process
+#BITCOIND_USER="cougar"
+#BITCOIND_GROUP="cougar"
+
+# Path to cougard executable
+#BITCOIND_BIN="/usr/bin/cougard"
+
+# Nice value to run cougard under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

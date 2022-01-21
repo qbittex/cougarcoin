@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=cougar
+Comment=cougar P2P Cryptocurrency
+Comment[fr]=cougar, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=cougar, eşten eşe kriptografik sanal para birimi
+Exec=cougar-qt %u
+Terminal=false
+Type=Application
+Icon=cougar128
+MimeType=x-scheme-handler/cougar;
+Categories=Office;Finance;

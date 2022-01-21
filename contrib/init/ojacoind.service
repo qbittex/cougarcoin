@@ -1,0 +1,26 @@
+[Unit]
+Description=cougar's distributed currency daemon
+After=network.target
+
+[Service]
+User=cougar
+Group=cougar
+
+Type=forking
+PIDFile=/var/lib/cougard/cougard.pid
+
+ExecStart=/usr/bin/cougard -daemon -pid=/var/lib/cougard/cougard.pid \
+          -conf=/etc/cougar/cougar.conf -datadir=/var/lib/cougard
+
+ExecStop=-/usr/bin/cougar-cli -conf=/etc/cougar/cougar.conf \
+         -datadir=/var/lib/cougard stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
